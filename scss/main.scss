@@ -1,0 +1,142 @@
+/* Reset styles */
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+/* reset styles END */
+
+/* Color Vairabls */
+$primary-color: rgb(183, 115, 247);
+
+
+
+/*Container Start
+****************************/
+.container{
+    max-width: 1920px;
+    margin: auto;
+    background-color: rgb(2, 2, 49);
+    //padding: 20% 0px;/* don't use padding like this to center element or something */
+    /* Since it'll work as center as per design I sent you, keep in mind not more, not less, just follow the layout, but you were doing good */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    .content{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        background-color: rgb(38, 38, 65);
+
+        .content-left{
+            flex-basis: 50%;    
+            padding: 5%;
+
+            .header-text{
+                font-size: 2.625rem; /* you can convert px to rem with alt + z */
+                font-weight: bold;
+                color: white;
+
+                span{
+                    color: blueviolet;
+                }
+            }
+
+            .text{
+                font-size: 1.0625rem;
+                color: $primary-color;
+                padding: 8% 0px;
+                line-height: 1.7rem;
+                word-spacing: 1px;
+                letter-spacing: .3px;
+            }
+
+            .counter-block{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 4%;
+                color: white;
+                    
+                .counter{
+                    flex-basis: 33%;   
+                    
+                    div{
+                        font-weight: bold;
+                        font-size: 1.5625rem;
+                    }
+
+                    span{        
+                        color: $primary-color;
+                        text-transform: uppercase;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+
+        .content-right{
+            flex-basis: 50%;
+        }
+    }
+}
+
+/*Container End*/
+
+
+/*Responsive Deisgn Start for 768px Devices*/
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 50% 10%;
+
+        .content{
+            .content-left{
+                text-align: center;
+                flex-basis: 100%;
+            
+                .header-text{
+                    font-size: 1.8rem;
+                }
+            }
+
+            .content-right{
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+/*Responsive Deisgn End for 768px Devices*/
+
+
+/*Responsive Deisgn Start for 400px Devices*/
+
+@media screen and (max-width: 400px) {
+    
+    .counter-block{
+        flex-direction: column;
+        row-gap: 30px;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    .counter{
+        flex-basis: 100%;;
+    }
+
+}
+
+/*Responsive Deisgn End for 400px Devices*/

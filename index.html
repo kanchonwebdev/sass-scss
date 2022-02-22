@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Layout - 01</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content-left">
+                <!-- Here its a header, so be careful about it using <h> tags, ok? Also about the class naming, not 'header-text' but may be 'header-title' -->
+                <!-- <div class="header-text">Get <span>insights</span> that help your business grow.</div> -->
+                <h1 class="header-text">Get <span>insights</span> that help your business grow.</h1>
+
+                <div class="text">
+                    Discover the benefits of data analytics and make better decisions regarding revenue, customer experience and overall efficiency
+                </div>
+
+                <div class="counter-block">
+                    <div class="counter">
+                        <div>10K+</div>
+                        <span>Companies</span>
+                    </div>
+
+                    <div class="counter">
+                        <div>314</div>
+                        <span>Templates</span>
+                    </div>
+
+                    <div class="counter">
+                        <div>12M</div>
+                        <span>Queries</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <img src="images/img1.PNG" alt="Right column bg">
+                <!-- <img src="images/img1.PNG" width="100%" height="100%" alt="content_right_img"> -->
+                <!-- Never write inline css or property like this, ok? -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
